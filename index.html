@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>watch-sync — personal health data sync</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    margin: 0 auto; padding: 3rem 1.25rem 5rem; max-width: 44rem;
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a; background: #fff;
+  }
+  @media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #121212; } a { color: #7cb7ff; } }
+  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 .5rem; letter-spacing: -.01em; }
+  h2 { font-size: 1.05rem; margin: 2.25rem 0 .5rem; }
+  p, li { margin: .6rem 0; }
+  .lede { font-size: 1.02rem; color: #555; margin-bottom: 2rem; }
+  @media (prefers-color-scheme: dark) { .lede { color: #a8a8a8; } }
+  ul { padding-left: 1.15rem; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #e2e2e2; font-size: .9rem; color: #666; }
+  @media (prefers-color-scheme: dark) { footer { border-color: #2a2a2a; color: #9a9a9a; } }
+  a { color: #0b5fff; }
+</style>
+</head>
+<body>
+
+<h1>watch-sync</h1>
+<p class="lede">A personal, single-user tool that copies its owner's own health data out of
+Google Health and into a private repository.</p>
+
+<h2>What it does</h2>
+<p>An app on the owner's Google Pixel Watch records sleep, steps and heart rate and
+sends it to Google. This tool authenticates as the owner with Google OAuth and reads
+that data back through the Google Health API on a schedule, so it can be reviewed and
+kept over time.</p>
+
+<h2>Who can use it</h2>
+<p>One person: the account owner. There is no sign-up, no other users, and no data
+belonging to anyone else is accessible. The tool is not distributed or offered as a
+service.</p>
+
+<h2>Permissions it requests</h2>
+<ul>
+  <li><code>googlehealth.activity_and_fitness.readonly</code> — steps and workouts</li>
+  <li><code>googlehealth.sleep.readonly</code> — sleep sessions and stages</li>
+  <li><code>googlehealth.health_metrics_and_measurements.readonly</code> — heart rate</li>
+</ul>
+<p>Read-only. The tool cannot modify or delete anything in Google Health.</p>
+
+<h2>Privacy</h2>
+<p>How the data is stored and what is never done with it is set out in the
+<a href="./privacy.html">privacy policy</a>. In short: it stays in a private
+repository only the owner can access, and it is never shared or sold.</p>
+
+<footer>
+  Personal project by <a href="https://github.com/roy47ty01">roy47ty01</a>.
+  Questions: <a href="./privacy.html#contact">contact</a>.
+</footer>
+
+</body>
+</html>
